@@ -1,13 +1,246 @@
+/*! normalize.css v8.0.1 | MIT License | ://github.com */
+
+html {
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+}
+
 body {
-    box-sizing: border-box;
+  margin: 0;
+}
+
+main {
+  display: block;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+
+pre {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+a {
+  background-color: transparent;
+}
+
+abbr[title] {
+  border-bottom: none;
+  text-decoration: underline;
+  text-decoration: underline dotted;
+}
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+img {
+  border-style: none;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+
+button,
+input {
+  overflow: visible;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+legend {
+  box-sizing: border-box;
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  padding: 0;
+  white-space: normal;
+}
+
+progress {
+  vertical-align: baseline;
+}
+
+textarea {
+  overflow: auto;
+}
+
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+[type="search"] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+
+details {
+  display: block;
+}
+
+summary {
+  display: list-item;
+}
+
+template {
+  display: none;
+}
+
+[hidden] {
+  display: none;
+}
+
+:root {
+    --color-base: #000000;
+    --color-level-1: #181823;
+    --color-light-gray: #DEECF9;
+    --color-dark-grey: #C7E0F4;
+    --color-text: #FFFFFF;
+    --color-primary: #5221E6;
+    --color-green-accent: #3CC74E;
+    --color-pink-accent: #E95D90;
+    --color-peach-accent: #FFF3E4;
+    --color-violet-accent: #FBE4FF;
+
+    --typography-label-1: 400 117px sans-serif;
+    --typography-heading-1: 700 78px sans-serif;
+    --typography-heading-2: 700 55px sans-serif;
+    --typography-heading-3: 700 24px sans-serif;
+    --typography-heading-4: 700 18px sans-serif;
+    --typography-heading-5: 700 16px sans-serif;
+    --typography-body-1: 400 18px sans-serif;
+    --typography-body-2: 400 16px sans-serif;
+    --typography-overline: 700 16px sans-serif;
+    --typography-button: 700 18px sans-serif;
+
+    --border-radius: 30px;
+    --border: 1px solid var(--color-light-gray);
+
+    --input-height: 50px;
+    --container-width: 1440px;
+    --content-padding-x: 15px;
+
+    --transition-duration: 0.2s;
+}
+
+body {
     background-color: #000;
-    padding: 0px;
-    margin: 0px;
+    color: var(--color-light-gray);
+}
+.container {
+    max-width: calc(var(--container-width) + var(--content-padding-x) * 2);
+    margin-inline: auto;
+    padding-inline: var(--content-padding-x);
+}
+h1 {
+    font: var(--typography-heading-1);
+}
+h2 {
+    font: var(--typography-heading-2);
+}
+h3 {
+    font: var(--typography-heading-3);
+}
+h4 {
+    font: var(--typography-heading-4);
+}
+h5 {
+    font: var(--typography-heading-5);
+}
+h6 {
+    font: var(--typography-heading-6);
 }
 .header {
-
-}
-.header__container {
     width: 100%;
     height: 88px;
     display: flex;
@@ -37,7 +270,7 @@ body {
 }
 .nav__link {
     font-size: 16px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font: var(--typography-label-1);
     text-decoration: none;
     color: white;
 }

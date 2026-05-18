@@ -1,3 +1,19 @@
+@font-face {
+    font-family: 'Sen';
+    src: url('../fonts/Sen-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Sen';
+    src: url('../fonts/Sen-Bold.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
 /*! normalize.css v8.0.1 | MIT License | ://github.com */
 
 html {
@@ -192,16 +208,16 @@ template {
     --color-peach-accent: #FFF3E4;
     --color-violet-accent: #FBE4FF;
 
-    --typography-label-1: 400 117px sans-serif;
-    --typography-heading-1: 700 78px sans-serif;
-    --typography-heading-2: 700 55px sans-serif;
-    --typography-heading-3: 700 24px sans-serif;
-    --typography-heading-4: 700 18px sans-serif;
-    --typography-heading-5: 700 16px sans-serif;
-    --typography-body-1: 400 18px sans-serif;
-    --typography-body-2: 400 16px sans-serif;
-    --typography-overline: 700 16px sans-serif;
-    --typography-button: 700 18px sans-serif;
+    --typography-label-1: 400 117px "Sen", sans-serif;
+    --typography-heading-1: 700 78px "Sen", sans-serif;
+    --typography-heading-2: 700 55px "Sen", sans-serif;
+    --typography-heading-3: 700 24px "Sen", sans-serif;
+    --typography-heading-4: 700 18px "Sen", sans-serif;
+    --typography-heading-5: 700 16px "Sen", sans-serif;
+    --typography-body-1: 400 18px "Sen", sans-serif;
+    --typography-body-2: 400 16px "Sen", sans-serif;
+    --typography-overline: 700 16px "Sen", sans-serif;
+    --typography-button: 700 18px "Sen", sans-serif;
 
     --border-radius: 30px;
     --border: 1px solid var(--color-light-gray);
@@ -217,63 +233,134 @@ body {
     background-color: #000;
     color: var(--color-light-gray);
 }
+
 .container {
     max-width: calc(var(--container-width) + var(--content-padding-x) * 2);
     margin-inline: auto;
     padding-inline: var(--content-padding-x);
 }
+
+a, button, input, textarea, svg * {
+    transition-duration: var(--transition-duration);
+}
+
+a {
+    color: var(--color-text);
+}
+
+a:hover {
+    color: var(--color-light-gray);
+}
+
 h1 {
     font: var(--typography-heading-1);
 }
+
 h2 {
     font: var(--typography-heading-2);
 }
+
 h3 {
     font: var(--typography-heading-3);
 }
+
 h4 {
     font: var(--typography-heading-4);
 }
+
 h5 {
     font: var(--typography-heading-5);
 }
+
 h6 {
     font: var(--typography-heading-6);
 }
+
 .header {
-    width: 100%;
-    height: 88px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-left: 5%;
+    padding-right: 5%;
+    height: 88px;
 }
-.header__logo {
-    margin-left: 70px;
-    margin-top: 32px;
-}
-.header__nav {
-    width: 476px;
-    margin-right: 72px;
-}
-.nav {
-}
-.nav__list {
+
+.header-logo {
     display: flex;
-    gap: 50px;
-    padding: 0px;
-    margin: 0px;
     justify-content: center;
     align-items: center;
+}
+
+.header-burger-menu {
+    display: none;
+    height: 24px;
+    width: 24px;
+    justify-content: center;
+    flex-direction: column;
+    align-items: end;
+    gap: 6px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.burger-menu-elem1 {
+  width: 18px;
+  height: 3px;
+  background-color: var(--color-text);
+  transition: background-color 0.3s ease;
+}
+
+.burger-menu-elem2 {
+  width: 13px;
+  height: 3px;
+  background-color: var(--color-text);
+  transition: background-color 0.3s ease;
+}
+
+.header-burger-menu:hover span {
+    background-color: var(--color-light-gray)
+}
+
+.header-menu {
+    display: flex;
+}
+
+.header-menu-list {
+    display: flex;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.header-menu-item {
     list-style-type: none;
 }
-.nav__item {
-}
-.nav__link {
-    font-size: 16px;
-    font: var(--typography-label-1);
+
+.header-menu-link {
+    display: inline-flex;
+    align-items: center;
     text-decoration: none;
-    color: white;
+    height: 88px;
+    padding-left: 24px;
+    padding-right: 24px;
+    font: var(--typography-body-2);
 }
-.nav__link--blue {
-    background-color: blue;
+
+.primary {
+    background-color: var(--color-primary);
+}
+
+@media(max-width: 768px) {
+    .header {
+        height: 72px;
+    }
+
+    .header-menu {
+        display: none;
+    }
+
+    .header-burger-menu {
+        display: flex;
+    }
+
 }

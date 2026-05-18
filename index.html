@@ -9,27 +9,31 @@
 <body>
     <header class="header">
         <a href="/" class="header-logo">
-            <img class="header-logo-img" src="./img/header_logo.svg" alt="Robin.W logo" width="78px" height="24px" loading="lazy">
+            <img class="header-logo-img" src="./img/logo.svg" alt="Robin.W logo" width="78px" height="24px" loading="lazy">
         </a>
-        <nav class="header-menu">
-            <ul class="header-meu-list">
+        <button class="header-burger-menu" id="header-burger-menu">
+            <span class="burger-menu-elem1"></span>
+            <span class="burger-menu-elem2"></span>
+        </button>
+        <nav class="header-menu" id="header-menu">
+            <ul class="header-menu-list">
                 <li class="header-menu-item">
-                    <a href="#" class="header-menu-link">
+                    <a href="#experience" class="header-menu-link">
                         Experience
                     </a>
                 </li>
                 <li class="header-menu-item">
-                    <a href="#" class="header-menu-link">
+                    <a href="#work" class="header-menu-link">
                         Work
                     </a>
                 </li>
                 <li class="header-menu-item">
-                    <a href="#" class="header-menu-link">
+                    <a href="#photography" class="header-menu-link">
                         Photography
                     </a>
                 </li>
                 <li class="header-menu-item">
-                    <a href="#" class="header-menu-link primary">
+                    <a href="#contact" class="header-menu-link primary">
                         Contact
                     </a>
                 </li>
@@ -38,16 +42,14 @@
     </header>
     <main class="content">
         <section class="hero">
-            <div class="hero__container">
-                <div class="hero__rectangle"></div>
-                <h1 class="hero__title">
-                    I’m Robin Williams. A Product Designer based in Italy.
-                </h1>
-                <h2 class="hero__description">
-                    I’m probably the most passionate designer you will ever get to work with. If you have a great project that needs some amazing skills, I’m your guy.
-                </h2>
-                <img src="./img/hero_img.png" alt="IMG NOT FOUND" class="hero__img" loading="lazy">
-            </div>
+            <div class="hero-background-rectangle"></div>
+            <h1 class="hero-title">
+                I’m Robin Williams. A Product Designer based in Italy.
+            </h1>
+            <h2 class="hero-description">
+                I’m probably the most passionate designer you will ever get to work with. If you have a great project that needs some amazing skills, I’m your guy.
+            </h2>
+            <img src="./img/hero.png" alt="Hero Img" class="hero-img" loading="lazy">
         </section>
     </main>
 </body>

@@ -1,17 +1,17 @@
 @font-face {
-    font-family: 'Sen';
-    src: url('../fonts/Sen-Regular.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+  font-family: 'Sen';
+  src: url('../fonts/Sen-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'Sen';
-    src: url('../fonts/Sen-Bold.woff2') format('woff2');
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
+  font-family: 'Sen';
+  src: url('../fonts/Sen-Bold.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
 }
 
 /*! normalize.css v8.0.1 | MIT License | ://github.com */
@@ -197,37 +197,37 @@ template {
 }
 
 :root {
-    --color-base: #000000;
-    --color-level-1: #181823;
-    --color-light-gray: #8491A0;
-    --color-dark-grey: #8C8C91;
-    --color-text: #FFFFFF;
-    --color-primary: #5221E6;
-    --color-green-accent: #3CC74E;
-    --color-pink-accent: #E95D90;
-    --color-peach-accent: #FFF3E4;
-    --color-violet-accent: #FBE4FF;
+  --color-base: #000000;
+  --color-level-1: #181823;
+  --color-light-gray: #8491A0;
+  --color-dark-grey: #8C8C91;
+  --color-text: #FFFFFF;
+  --color-primary: #5221E6;
+  --color-green-accent: #3CC74E;
+  --color-pink-accent: #E95D90;
+  --color-peach-accent: #FFF3E4;
+  --color-violet-accent: #FBE4FF;
 
-    --typography-label-1: 400 117px "Sen", sans-serif;
-    --typography-heading-1: 700 78px "Sen", sans-serif;
-    --typography-heading-2: 700 55px "Sen", sans-serif;
-    --typography-heading-3: 700 24px "Sen", sans-serif;
-    --typography-heading-4: 700 18px "Sen", sans-serif;
-    --typography-heading-5: 700 16px "Sen", sans-serif;
-    --typography-body-1: 400 18px "Sen", sans-serif;
-    --typography-body-2: 400 16px "Sen", sans-serif;
-    --typography-overline: 700 16px "Sen", sans-serif;
-    --typography-button: 700 18px "Sen", sans-serif;
-    --typography-mobile-heading: 700 32px "Sen", sans-serif;
+  --typography-label-1: 400 117px "Sen", sans-serif;
+  --typography-heading-1: 700 78px "Sen", sans-serif;
+  --typography-heading-2: 700 55px "Sen", sans-serif;
+  --typography-heading-3: 700 24px "Sen", sans-serif;
+  --typography-heading-4: 700 18px "Sen", sans-serif;
+  --typography-heading-5: 700 16px "Sen", sans-serif;
+  --typography-body-1: 400 18px "Sen", sans-serif;
+  --typography-body-2: 400 16px "Sen", sans-serif;
+  --typography-overline: 700 16px "Sen", sans-serif;
+  --typography-button: 700 18px "Sen", sans-serif;
+  --typography-mobile-heading: 700 32px "Sen", sans-serif;
 
-    --border-radius: 30px;
-    --border: 1px solid var(--color-light-gray);
+  --border-radius: 30px;
+  --border: 1px solid var(--color-light-gray);
 
-    --input-height: 50px;
-    --container-width: 1440px;
-    --content-padding-x: 72px;
+  --input-height: 50px;
+  --container-width: 1440px;
+  --content-padding-x: 72px;
 
-    --transition-duration: 0.2s;
+  --transition-duration: 0.2s;
 }
 
 body {
@@ -238,6 +238,8 @@ body {
 .container {
   max-width: calc(var(--container-width) + var(--content-padding-x) * 2);
   margin-inline: auto;
+  padding-left: 72px; /* Внутренний отступ на узких экранах */
+  padding-right: 72px;
 }
 
 /* Для интерактивных элементов */
@@ -359,6 +361,11 @@ h6 {
 }
 
 /* Секция Hero */
+.hero-section.container {
+  padding-left: 11px; /* Внутренний отступ на узких экранах */
+  padding-right: 27px;
+}
+
 .hero-container {
   display: flex;
   position: relative;
@@ -390,29 +397,43 @@ h6 {
   height: 715px;
 }
 
-.section-label {
+.expirience-label {
   font: var(--typography-overline);
   text-transform: uppercase;
+  margin-top: 120px;
+  margin-bottom: 8px;
 }
 
-.section-title {
-  color: var(--color-text)
+.expirience-title {
+  color: var(--color-text);
+  width: 55vw;
 }
 
 .expirience-grid {
   display: grid;
-  grid-template-columns: repeat(3 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 1fr;
-  column-gap: 24px;
   justify-content: center;
   align-items: center;
+  gap: 7vw;
 }
 
 .expirience-item {
   grid-row: 1;
+  grid-column: auto;
 }
 
+.expirience-item-company-name {
+  color: var(--color-text);
+}
 
+.expirience-item-number {
+  font: var(--typography-label-1)
+}
+
+.expirience-item-desciption {
+  font: var(--typography-body-2)
+}
 
 /* Стили для выделения текста */
 .primary {
@@ -451,6 +472,20 @@ h6 {
   .hero-title {
     font: var(--typography-heading-2);
   }
+
+  .expirience-section.container {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .expirience-label {
+    margin-top: 80px;
+  }
+
+  .expirience-title {
+    color: var(--color-text);
+    width: 100%;
+  }
 }
 
 @media(max-width: 700px) {
@@ -488,4 +523,18 @@ h6 {
     font: var(--typography-mobile-heading);
   }
 
+  .expirience-section.container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .expirience-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+  }
+
+  .expirience-item {
+    grid-row: auto;
+    grid-column: 1;
+  }
 }

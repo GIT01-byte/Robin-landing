@@ -7,6 +7,7 @@
     <title>Robin. W</title>
 </head>
 <body>
+    <div class="background-rectangle"></div>
     <header class="header">
         <a href="/" class="header-logo">
             <img class="header-logo-img" src="./img/logo.svg" alt="Robin.W logo" width="78px" height="24px" loading="lazy">
@@ -41,15 +42,28 @@
         </nav>
     </header>
     <main class="content">
-        <section class="hero">
-            <div class="hero-background-rectangle"></div>
-            <h1 class="hero-title">
-                I’m Robin Williams. A Product Designer based in Italy.
-            </h1>
-            <h2 class="hero-description">
-                I’m probably the most passionate designer you will ever get to work with. If you have a great project that needs some amazing skills, I’m your guy.
-            </h2>
-            <img src="./img/hero.png" alt="Hero Img" class="hero-img" loading="lazy">
+        <section class="hero-section container">
+            <div class="hero-container">
+                <picture>
+                    <source media="(max-width: 700px)" srcset="./img/hero_360.png" class="hero-img">
+                    <source media="(max-width: 1199px)" srcset="./img/hero_768.png" class="hero-img">
+                    <source media="(min-width: 1200px)" srcset="./img/hero_1440.png" class="hero-img">
+                    <img src="./img/hero_1440.png" alt="Hero img" class="hero-img">
+                </picture>
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        I’m Robin Williams. A Product Designer 
+                        <span class="text-dark-grey">based in Italy.</span>
+                    </h1>
+                    <p class="hero-description">
+                        I’m probably the most passionate designer you will ever get to work with. If you have
+                        a great project that needs some amazing skills, I’m your guy.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="expirinece-section container">
+
         </section>
     </main>
 </body>

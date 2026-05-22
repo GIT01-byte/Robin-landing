@@ -13,7 +13,7 @@
         <a href="/" class="header-logo">
             <img class="header-logo-img" src="./img/logo.svg" alt="Robin.W logo" width="78px" height="24px" loading="lazy">
         </a>
-        <button class="header-burger-menu" id="header-burger-menu">
+        <button class="header-burger-menu" id="header-burger-menu" aria-label="Open menu">
             <span class="burger-menu-elem1"></span>
             <span class="burger-menu-elem2"></span>
         </button>
@@ -46,16 +46,17 @@
         <section class="hero-section container">
             <div class="hero-container">
                 <picture>
-                    <source media="(max-width: 700px)" srcset="./img/hero_360.png" class="hero-img">
-                    <source media="(max-width: 1199px)" srcset="./img/hero_768.png" class="hero-img">
-                    <source media="(min-width: 1200px)" srcset="./img/hero_1440.png" class="hero-img">
-                    <img src="./img/hero_1440.png" alt="Hero img" class="Robin Williams - Product Designer Photo">
+                    <source media="(max-width: 700px)" srcset="./img/360/hero.png" class="hero-img">
+                    <source media="(max-width: 1199px)" srcset="./img/768/hero.png" class="hero-img">
+                    <source media="(min-width: 1200px)" srcset="./img/1440/hero.png" class="hero-img">
+                    <img src="./img/hero_1440.png" alt="Hero img">
                 </picture>
                 <div class="hero-text">
                     <h1 class="hero-title">
                         I’m Robin Williams. A Product Designer 
                         <span class="text-dark-grey">based in Italy.</span>
                     </h1>
+                    <h2 class="visually-hidden">Hero</h2>
                     <p class="hero-description">
                         I’m probably the most passionate designer you will ever get to work with. If you have
                         a great project that needs some amazing skills, I’m your guy.
@@ -63,45 +64,72 @@
                 </div>
             </div>
         </section>
-        <section class="expirience-section container">
-            <h4 class="expirience-label">work experience</h4>
-            <h2 class="expirience-title">Companies I have worked for in the past</h2>
-            <div class="expirience-grid">
-                <div class="expirience-item">
-                    <span class="expirience-item-number">01</span>
-                    <div class="expirience-content">
-                        <h3 class="expirience-item-company-name">
+        <section class="experience-section container">
+            <h2 class="experience-label">work experience</h2>
+            <h4 class="experience-title">Companies I have worked for in the past</h4>
+            <div class="experience-grid">
+                <div class="experience-item">
+                    <span class="experience-item-number">01</span>
+                    <div class="experience-content">
+                        <h3 class="experience-item-company-name">
                             <span class="green-accent">Google</span>, Interaction Designer
                         </h3>
-                        <p class="expirience-item-desciption">
+                        <p class="experience-item-desciption">
                             I currently am the lead designer on the interaction design team for Google Play.
                         </p>
                     </div>
                 </div>
-                <div class="expirience-item">
-                    <span class="expirience-item-number">02</span>
-                    <div class="expirience-content">
-                        <h3 class="expirience-item-company-name">
+                <div class="experience-item">
+                    <span class="experience-item-number">02</span>
+                    <div class="experience-content">
+                        <h3 class="experience-item-company-name">
                             <span class="blue-accent">Facebook</span>, Product Designer
                         </h3>
-                        <p class="expirience-item-desciption">
+                        <p class="experience-item-desciption">
                             I’ve worked on a wide variety of internal tools for facebook over the past 6 years.
                         </p>
                     </div>
                 </div>
-                <div class="expirience-item">
-                    <span class="expirience-item-number">03</span>
-                    <div class="expirience-content">
-                        <h3 class="expirience-item-company-name">
+                <div class="experience-item">
+                    <span class="experience-item-number">03</span>
+                    <div class="experience-content">
+                        <h3 class="experience-item-company-name">
                             <span class="pink-accent">Dribbble</span>, Graphic Designer
                         </h3>
-                        <p class="expirience-item-desciption">
+                        <p class="experience-item-desciption">
                             I started my design career with Dribbble. I was incharge of creating illustrations for the platform.
                         </p>
                     </div>
                 </div>
             </div>
         </section>
+        <section class="feedback-section container">
+            <div class="feedback-content">
+                <div class="feedback-info">
+                    <h2 class="visually-hidden">Feedback</h2>
+                    <h3 class="feedback-title">Let’s get started</h3>
+                    <p class="feedback-description">Now that you know a lot about me, let me know if you are interested to work with me.</p>
+                </div>
+                <form class="feedback-form">
+                    <div class="form-group">
+                        <label for="user-name">Name</label>
+                        <input type="text" id="user-name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="user-email">Email</label>
+                        <input type="email" id="user-email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="user-message">Message</label>
+                        <textarea name="user-message" id="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn primary">
+                        <span class="btn-text">Let’s get started</span>
+                    </button>
+                </form>
+            </div>
+        </section>
     </main>
+    <footer style="height: 715px"></footer>
 </body>
 </html>

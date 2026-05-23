@@ -400,11 +400,10 @@ h6 {
 }
 
 .hero-text {
-  position: absolute;
   display: inline-flex;
   flex-direction: column;
-  left: 46%;
   gap: 50px;
+  margin-left: -80px;
 }
 
 .hero-title {
@@ -466,41 +465,32 @@ h6 {
 }
 
 /* Секция Feedback */
-/* Исправить проблему жесткой высоту для адаптива */
-.feedback-section.container {
-  padding-top: 8vw;    /* Задаем безопасные вертикальные отступы */
-  padding-bottom: 8vw; 
+.feedback-section.container { 
   color: var(--color-text);
 }
 
 .feedback-content {
   padding-left: 7vw;
   padding-right: 7vw;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
   row-gap: 48px;
   column-gap: 24px;
 }
 
 .feedback-info {
-  flex: 1 1 400px;
-  max-width: 526px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
 }
 
 .feedback-title {
   font: var(--typography-heading-2);
-  margin: 0 0 24px 0;
 }
 
 .feedback-description {
   font: var(--typography-body-1);
   color: var(--color-light-gray);
-}
-
-.feedback-form {
-  flex: 1 1 400px;
-  max-width: 526px;
-  width: 100%;
 }
 
 .form-group {
@@ -520,7 +510,6 @@ h6 {
   font: var(--typography-body-1);
   border: none;
   margin-top: 12px;
-  min-height: 30px;
   padding: 12px;
 }
 
@@ -566,6 +555,10 @@ h6 {
   }
   
   /* Hero */
+  .hero-text {
+    margin-left: -60px;
+  }
+  
   .hero-title {
     font: var(--typography-heading-2);
   }
@@ -576,15 +569,9 @@ h6 {
   }
 
   /* Feedback */
-  .feedback-section.container {
-    padding-top: 11vw;
-    padding-bottom: 11vw;
-  }
-
   .feedback-content {
     padding-left: 0vw;
     padding-right: 0vw;
-    flex-direction: column;
   }
 }
 
@@ -618,8 +605,8 @@ h6 {
   }
 
   .hero-text {
-    position: unset;
     display: block;
+    margin-left: unset;
   }
 
   .hero-title {

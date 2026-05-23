@@ -207,7 +207,7 @@ template {
   --color-light-gray: #8491A0;
   --color-dark-grey: #8C8C91;
   --color-text: #FFFFFF;
-  --color-primary: #5221E6;
+  --color-primary-accent: #5221E6;
   --color-green-accent: #3CC74E;
   --color-pink-accent: #E95D90;
   --color-peach-accent: #FFF3E4;
@@ -418,7 +418,7 @@ h6 {
 }
 
 /* Секция Work experience */
-.experience-section {
+.experience-section.container {
   display: grid;
   /* Автоматически подстраивает высоту строк под самый высокий элемент в ряду */
   grid-auto-rows: auto;
@@ -462,6 +462,25 @@ h6 {
 
 .experience-item-desciption {
   font: var(--typography-body-2)
+}
+
+/* Сеция Philosphy */
+.philosophy-section.container {
+  background-color: var(--color-peach-accent);
+  color: var(--color-level-1);
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-block: 0px;
+}
+
+.philosophy-grid {
+  display: flex;
+}
+
+.philosophy-img {
+  width: 100%;
+  height: 100%;
+  justify-self: end;
 }
 
 /* Секция Feedback */
@@ -519,8 +538,8 @@ h6 {
 }
 
 /* Стили для выделения текста */
-.primary {
-  background-color: var(--color-primary);
+.primary-accent {
+  background-color: var(--color-primary-accent);
 }
 
 .text-dark-grey {
@@ -532,7 +551,7 @@ h6 {
 }
 
 .blue-accent {
-  color: var(--color-primary);
+  color: var(--color-primary-accent);
 }
 
 .pink-accent {

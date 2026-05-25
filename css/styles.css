@@ -310,7 +310,10 @@ h6 {
 }
 
 /* Шапка */
-.header {
+.header.container {
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-block: 0px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -420,12 +423,6 @@ h6 {
 }
 
 /* Секция Work experience */
-.experience-section.container {
-  display: grid;
-  /* Автоматически подстраивает высоту строк под самый высокий элемент в ряду */
-  grid-auto-rows: auto;
-}
-
 .experience-label {
   font: var(--typography-overline);
   text-transform: uppercase;
